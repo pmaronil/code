@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Patricia Maronilla</title>
+<link rel="stylesheet" type="text/css" href="reset.css">
+<link rel="stylesheet" type="text/css" href="projects.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i|Tajawal:200,300,400,500,700,800,900" rel="stylesheet">
+
+<script language="javascript">
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+
+var state= false;
+var x = document.getElementsById("image1");
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+
+    if (state == false) {
+        document.getElementById("image1").src="./closenav.png";
+        document.getElementById("myDropdown").style.WebkitAnimationPlayState = "running";
+        state = true;
+        return;
+    }
+    if (state == true) {
+        document.getElementById("image1").src="./nav.png";
+        document.getElementById("myDropdown").style.WebkitAnimationPlayState = "paused";
+        state = false;
+        return;
+    }
+
+
+
+
+
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+      document.getElementById("image").src="./nav.png";
+    }
+
+  }
+
+}
+</script>
+
+
+
+</head>
+
+
+<body>
+
+
+<header>
+    <div class="dropdown">
+      <input type="image" onclick="myFunction()" class="dropbtn" img id="image1" img src="./nav.png"/>
+
+
+      <div id="myDropdown" class="dropdown-content">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./Resume2018.pdf">Resume</a>
+      </div>
+    </div>
+</header>
+
+<div id = "name" align="left">
+    <h1> patricia maronilla</h1>
+
+</div>
+
+
+
+
+
+
+<div class= "project1">
+
+    <div class= "exhibit">
+        <span>
+        <a href="./exhibit.html">
+            <img href="./exhibit.html"class="half" src="./full.png" align="left">
+        </a>
+        this is some text
+    </span>
+
+    </div>
+
+
+    <div class= "about">
+        <br>
+        <h3> Website </h3>
+    </div>
+</div>
+
+<div class= "description">
+    <br>
+    <h2> UC Davis Computer Science Graduate 2018 </h2>
+</div>
+
+
+
+
+
+<footer>
+        <h5> Patricia Maronilla  &#169;</h5>
+</footer>
+
+</body>
+
+</html>

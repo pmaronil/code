@@ -1,0 +1,281 @@
+
+header {
+	display: flex;
+	width: 100%;
+	height: 140px;
+	flex-direction: row;
+	flex-grow: 1;
+	background-color: white;
+	align-items: center;
+}
+
+h2 {
+   font-family: 'Lato';
+	 font-size: 45px;
+	 font-weight: 900;
+	 font-style:italic;
+   text-align: left;
+	 padding-left: 2vw;
+	 padding-right: 3vw;
+   margin: 10px;
+   color: #2F4D7F;
+}
+#bar{
+	position: relative;
+
+}
+#tag_save{
+	margin:5px;
+	padding: 5px;
+	color: white;
+	background-color:#87B4B7;
+	border-radius: 5px;
+}
+#savedTags{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	z-index: 2;
+
+}
+#suggest {
+	font-style: italic;
+	color: #b3b3b3;
+	padding-left:10px;
+}
+#autoTags{
+	margin: 2px;
+}
+
+#searchedText {
+	color: #2F4D7F;
+	text-align: left;
+	font-style: italic;
+	margin-left: 10px;
+	margin-right: 5px;
+}
+#searchedBy {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+}
+#searchTags {
+	display: flex;
+	flex-direction: row;
+}
+#searchedTags {
+	padding: 5px;
+	margin: 10px;
+	background-color: #404040;
+	color: white;
+	border-radius: 5px;
+ }
+
+ #searchAutocomplete{
+ 	position:absolute;
+ 	top: 55px;
+ 	left:40px;
+ 	z-index: 1;
+
+ 	display: none;
+ 	flex-direction: column;
+
+ 	background-color: white;
+ 	width: 85%;
+	border-style: solid;
+	border-width: thin;
+	border-color: black;
+ }
+
+#tag_auto{
+	border-radius: 5px;
+	color: white;
+	background-color: #87B4B7;
+	padding: 5px;
+	margin: 5px;
+	width: fit-content;
+}
+
+#searchButton{
+	font-size: 43px;
+	font-weight: 400;
+	color: #2F4D7F;
+}
+
+#req-text{
+	margin-left: 40px;
+	font-size: 25px;
+}
+input {
+	height: 45px;
+    width: 50vw;
+    border-color: #2F4D7F;
+    border-width: thin;
+	border-right: none;
+}
+button {
+    height: 49px;
+	width: 80px;
+    background-color: Transparent;
+	border-color: #2F4D7F;
+	border-width: thin;
+}
+button.addTag{
+	height: 37px;
+	width: 40px;
+	background-color: Transparent;
+	color: #87B4B7;
+	border-color: #87B4B7;
+	border-width: thin;
+
+	border-top-color: #87B4B7;
+	border-right-color: #87B4B7;
+	border-bottom-color: #87B4B7;
+	border-left: none;
+
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+input.tagInput{
+	height: 33px;
+	width: 60px;
+	background-color: Transparent;
+	color: white;
+	border-color: #87B4B7;
+	border-width: thin;
+
+
+	border-bottom-color: #87B4B7;
+	border-top-color: #bffbff;
+	border-left-color: #bffbff; //trial color works
+	border-right: none;
+
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#tagInput{
+	display: flex;
+}
+
+#landingPage{
+	color: #2F4D7F;
+	text-align: center;
+}
+#pageText{
+	padding-top: 10vw;
+	font-size: 40px;
+	opacity: 0.5;
+}
+#search {
+	float: right;
+	display: flex;
+  	flex-direction: row;
+}
+
+
+body {
+	margin: 0px;
+	background-color: #EDEDED;
+}
+
+div.selectedControls {
+	position: absolute;
+	display: flex;
+	width: 50%;
+	height: 50%;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+	top: 30%;
+	left: 25%;
+}
+
+div.normalControls {
+	display: none;
+}
+
+/* Photo tile - position and size will be given by PhotoGallery */
+div.tile {
+    backgroundColor: #eee;
+    cursor: pointer;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+/* Tag styling */
+
+p.tagText {
+	background-color: #87B4B7;
+	padding: 10px;
+    border-radius: 5px;
+    color: white;
+	margin: 10px;
+}
+
+img {
+    display: block;
+}
+
+/* so far nothing special when image selected */
+img.normal {
+}
+
+img.selected {
+}
+
+
+
+
+
+/* Mobile */
+@media (max-width: 480px){
+
+header {
+	height: 70px;
+}
+
+input {
+	display: none;
+}
+
+h2 {
+		font-size: 30px;
+	}
+	#searchButton{
+
+		font-size: 40px;
+		font-weight: 100;
+		color: #2F4D7F;
+	}
+	button {
+		position:absolute;
+   		top:15px;
+   		right:0;
+	    height: 45px;
+		width: 60px;
+	    background-color: Transparent;
+		border-color: white;
+		border-width: thin;
+			/* text-align: right;
+			width: 100%; */
+
+	}
+
+	#pageText {
+		font-size: 25px;
+	}
+
+	#landingPage {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 200px;
+		bottom: 0;
+	}
+
+
+
+}

@@ -1,0 +1,263 @@
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+}
+/* img {
+    height: 50px;
+    width: 50px;
+} */
+/* .letters{
+    padding-top: 150px;
+} */
+.icons{
+    margin-left:auto;
+    margin-right:auto;
+    width:80%;
+
+}
+.fa {
+  padding: 15px;
+  font-size: 35px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px 2px;
+  border-radius: 25%;
+  background-color: #606060;
+  color: white;
+
+}
+.facet:hover{
+    -webkit-animation: pulse 3s;  /* Chrome, Safari, Opera */
+    animation: pulse 3s;
+}
+
+.fa:hover {
+    opacity: 0.85;
+    -webkit-animation: pulse 3s;  /* Chrome, Safari, Opera */
+    animation: pulse 3s;
+}
+
+.fa-facebook:hover {
+  background: #3B5998;
+  color: white;
+}
+.fa-github:hover {
+    background: black;
+    color: white;
+}
+
+.fa-twitter:hover {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram:hover {
+  background: #835C3B;
+  color: white;
+}
+.fa-snapchat-ghost:hover {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-linkedin:hover {
+  background: #007bb5;
+  color: white;
+}
+
+
+/* #button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+} */
+/* .icons{
+    position: fixed;
+    top: 86%;
+    left: 37%;
+} */
+h1{
+    padding-top: 50px;
+
+    /* position: fixed;
+    top: 40px;
+    left: 30px; */
+}
+#face{
+    -webkit-animation: pulse 3s;  /* Chrome, Safari, Opera */
+    -webkit-animation-play-state: running;  /* Chrome, Safari, Opera */
+    animation: pulse 3s;
+    animation-play-state: running;
+
+    /* position: absolute;
+    top: 30%;
+    left: 40%; */
+
+}
+h2{
+    font-weight: lighter;
+    font-stretch: expanded;
+}
+
+/* Dropdown Button */
+.dropbtn {
+
+    background-color: white;
+    color: white;
+    padding: 3px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    -webkit-animation: pulse 3s;  /* Chrome, Safari, Opera */
+    -webkit-animation-play-state: paused;  /* Chrome, Safari, Opera */
+    animation: pulse 3s;
+    animation-play-state: paused;
+
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+  height: 200vh;
+}
+.text {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
+}
+
+.text.hidden {
+  border-bottom: 1px solid black;
+}
+
+.text li {
+  display: inline-block;
+  float: left;
+  font-weight: 700;
+  font-size: 2em;
+  color: black;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  max-width: 2em;
+}
+.text.hidden li.spaced {
+  padding-left: 0;
+}
+.text li.spaced {
+  padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
+}
+
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.20, 1.20, 1.20);
+    transform: scale3d(1.20, 1.20, 1.20);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.20, 1.20, 1.20);
+    transform: scale3d(1.20, 1.20, 1.20);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@media (max-width: 480px){
+    .fa {
+        font-size: 30px;
+        width: 25px;
+    }
+}

@@ -1,0 +1,276 @@
+@media (max-width: 850px) {
+    #active {
+        display: none;
+    }
+}
+
+a { /* Remove blue color and underline from links */
+    text-decoration: none;
+    color: inherit; /* Inherit the color from parent */
+}
+
+a.active { /* Make current tab bold */
+    font-weight: 700;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300; /* body text default should be Montserrat Light */
+    min-height: 100vh;  /* needed to make sure body fills up window */
+    color: #6C2E2F; /* dark red like color */
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* spread website title and nav */
+    background-color: #E8AB9E;
+    color: #FFFFFF;
+    padding: 30px;
+}
+
+header h1 { /* Painter's name */
+    text-transform: uppercase;
+    font-size: 28pt;
+    font-weight: 700; /* bold */
+    margin-bottom: 10px; /* margin after painter's name */
+}
+
+header h2 { /* Exhibition name */
+    font-size: 14pt;
+}
+
+header ul { /* flex container for lists */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* move nav all the way to the right */
+    text-transform: uppercase;
+}
+
+header li {
+    margin: 13px 15px; /* top and bottom px & right and left margin px */
+    font-size: 11pt;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+main h1 {
+    font-weight: 700;
+    font-size: 14pt;
+    margin-bottom: 10px;
+}
+
+main h2 {
+    font-size: 14pt;
+}
+
+.text p {
+    line-height: 1.6;
+    font-size: 11pt;
+    margin-right: 20px;
+}
+
+hr {
+    background: #6C2E2F;
+    margin-left: 0; /* move tag all the way to left */
+    width: 20px;
+    height: 1px;
+    border: none;
+}
+
+.images { /* the images columns */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* make images wrap to new row */
+    margin: 0 0 -10px 0; /* shift .images a bit to the left */
+}
+
+.images img { /* dimensions of image */
+    margin-bottom: 10px; /* spacing between image + painting title */
+}
+
+img {
+    width: 100%; /* dill up div image */
+}
+
+.images div { /* image + painting title */
+    flex: 1 1 150px; /* control size of the div */
+    margin: 0 10px;
+    margin-bottom: 20px; /* spacing after painting + painting title */
+}
+
+.images h1 { /* Painting titles */
+    margin-bottom: 5px;
+}
+
+.images h3 { /* Painting year + style */
+    font-size: 11pt;
+    font-style: italic;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 auto; /* don't grow, don't shrink, hold contents */
+    background-color: #E8AB9E; /* salmon like color */
+    color: #FFFFFF; /* white */
+    padding: 30px;
+    font-size: 11pt;
+}
+
+footer h4 {
+    font-weight: 700; /* headers in bold */
+    margin-bottom: 25px; /* add space after headers */
+}
+
+.hours { /* second div in the footer: hours */
+    margin: 0 70px; /* add space between div rows, align with imgs */
+}
+
+footer li {
+    margin: 10px 0; /* add top and bottom margin between lists*/
+}
+
+/* switches to mobile view on screens 550px or less */
+@media (min-width: 551px) {
+    .bar {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    header {
+        display: flex;
+        flex-direction: column-reverse; /* nav on top of Painter's name */
+        box-shadow: rgba(0, 0, 0, 0.3) 0 2px 15px 0px; /* shadow below header */
+        padding: 20px;
+    }
+
+    header h1 { /* Painter's name */
+        margin-top: 30px; /* move Painter's name down */
+        text-align: center;
+    }
+
+    header h2 { /* Exhibition name */
+        text-align: center;
+        margin-bottom: 20px; /* spacing between Exhibition name and main */
+    }
+
+    header ul { /* flex container for lists */
+        margin-top: 20px; /* spacing between top page and page title */
+        justify-content: center; /* move nav center of page */
+    }
+
+    header li { /* list elements */
+        margin: 0 10px; /* top and bottom px & right and left margin px */
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .text h1, .text h2 { /* Text title & subtitle */
+        display: inline; /* combine title and subtitle 1 line */
+    }
+
+    .text .headline {
+        text-align: center;
+    }
+
+    .text p {
+        margin-top: 10px; /* spacing between text and title */
+    }
+
+    .text {
+        margin-bottom: 30px; /* spacing between text and images */
+        margin-left: 20px; /* align text with image */
+    }
+
+    hr {
+        display: none;
+    }
+
+    .images h1, .images h3 { /* painting descriptions */
+        display: inline; /* both title and painting style on the same line */
+    }
+
+    .images div {
+        flex: 1 1 70%; /* control size of the div */
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 30px; /* align text with paintings on main */
+    }
+
+    footer .hours {
+        margin: 25px 0 0 0; /* only add margin top */;
+    }
+}
+
+/* switch to large view after 850 pixels (Extra Credit) */
+@media (min-width: 851px) {
+    main {
+        flex-wrap: wrap;
+        padding: 0;
+        padding-top: 20px;
+    }
+
+    .text {
+        margin-top: 30px;
+        margin-right: 15px; /* spacing text and active painting */
+        margin-left: 20px;
+        flex: 1; /* text occupies about 1/3 of image */
+    }
+
+    .text p {
+        font-size: 14pt;
+    }
+
+    .images h1, .images h3 { /* only active should show painting description */
+        display: none;
+    }
+
+    #active {
+        flex: 2; /* active image occupy about 2/3 page */
+        margin-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #active img {
+        margin-bottom: 20px; /* spacing between active image and title */
+    }
+
+    #active h1, #active h3 {
+        font-size: 20pt;
+        display: inline;
+    }
+
+    .images { /* the images columns */
+        flex: 1 0 100%;
+    }
+
+    .images div { /* image + painting title */
+        flex: 1 1 15%; /* control size of the div */
+        margin: 0 5px; /* spacing between paintings */
+        margin-top: 20px;
+        margin-bottom: 5px; /* spacing between images and footer */
+    }
+
+    .images div:first-child { /* 1st image and page boundary */
+        margin-left: 0;
+    }
+
+    .images div:last-child { /* last image and page boundary */
+        margin-right: 0;
+    }
+}

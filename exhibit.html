@@ -1,0 +1,119 @@
+<!doctype HTML>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Manetti Shrem Museum</title>
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="exhibit.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    </head>
+
+    <body onload="switchImage('toys')"> <!-- load 1st painting when page loads -->
+        <header>
+            <div>
+                <h1>Wayne Thiebaud</h1>
+                <h2>Exhibition at Manetti Shrem Museum</h2>
+            </div>
+
+            <nav>
+                <ul>
+                    <!-- Make Home the current page (will be bold) -->
+                    <li><a href="#" class="active">Home</a></li>
+                    <li class="bar">|</li>
+                    <li><a href="#">About</a></li>
+                    <li class="bar">|</li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+        <div class="text">
+            <div class="headline">
+                <h1>Open until May 13</h1>
+                <span class="bar">|</span>
+                <h2>free to the public</h2>
+            </div>
+            <hr>
+
+            <p>
+            At an extraordinary historical moment, Wayne Thiebaud proposed a
+            radical new take on painting, and he did so with a slice of pie.
+            This exhibition invites viewers to trace Thiebaud’s emergence as
+            a mature artist with a singular style. The first exhibition to
+            explore this formative period, Wayne Thiebaud | 1958–1968 brings
+            together more than 60 early paintings gathered from private
+            collections and museums throughout the United States.
+            </p>
+        </div>
+
+        <div id="active"></div> <!-- div for active painting -->
+        <div class="images">
+            <div onclick="switchImage('toys')" id="toys">
+                <img src="Wind Toys, 1962. oil on canvas.jpg"
+                     alt="Wind Toys, 1962. oil on canvas." />
+                <h1>Wind Toys</h1>
+                <h3>(1962. oil on canvas)</h3>
+            </div>
+
+            <div onclick="switchImage('pancake')" id="pancake">
+                <img src="Pancake Breakfast, 2008. oil on canvas.jpg"
+                     alt="Pancake Breakfast, 2008. oil on canvas." />
+                <h1>Pancake Breakfast</h1>
+                <h3>(2008. oil on canvas)</h3>
+            </div>
+
+            <div onclick="switchImage('cake')" id="cake">
+                <img src="Around the Cake, 1962, oil on canvas.jpg"
+                     alt="Around the Cake, 1962. oil on canvas." />
+                <h1>Around the Cake</h1>
+                <h3>(1962. oil on canvas)</h3>
+            </div>
+
+            <div onclick="switchImage('machines')" id="machines">
+                <img src="Three Machines, 1963. oil on canvas.jpg"
+                     alt="Three Machines, 1963. oil on canvas" />
+                <h1>Three Machine</h1>
+                <h3>(1963. oil on canvas)</h3>
+            </div>
+
+            <div onclick="switchImage('boston')" id="boston">
+                <img src="Boston Creems, 1962. oil on canvas.jpg"
+                     alt="Boston Cremes, 1962. oil on canvas" />
+                <h1>Boston Cremes</h1>
+                <h3>(1962. oil on canvas)</h3>
+            </div>
+
+            <div class="painting" onclick="switchImage('bananas')" id="bananas">
+                <img class="bananas" src="Bananas, 1963. Oil on canvas.jpg"
+                     alt="Bananas, 1963. Oil on canvas" />
+                <h1>Bananas</h1>
+                <h3>(1963. oil on canvas)</h3>
+            </div>
+        </div>
+        </main>
+
+        <footer>
+            <div>
+                <h4>Manetti Shrem Museum</h4>
+                <ul>
+                    <li>254 Old Davis Rd</li>
+                    <li>Davis, CA 95616</li>
+                    <li>(530) 752-8500</li>
+                </ul>
+            </div>
+
+            <div class="hours">
+                <h4>Hours</h4>
+                <ul>
+                    <li>Closed Monday</li>
+                    <li>Open Tuesday–Friday 12 am – 6 pm</li>
+                    <li>Open Saturday-Sunday 11 am – 5 pm</li>
+                </ul>
+            </div>
+        </footer>
+        <script src="exhibit.js"> </script>
+    </body>
+</html>
